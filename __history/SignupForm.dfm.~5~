@@ -1,0 +1,137 @@
+object formSignup: TformSignup
+  Left = 0
+  Top = 0
+  Caption = 'Signup'
+  ClientHeight = 511
+  ClientWidth = 1001
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object panelSignup: TPanel
+    AlignWithMargins = True
+    Left = 344
+    Top = 40
+    Width = 361
+    Height = 417
+    BorderStyle = bsSingle
+    Caption = 'SignUp Form'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Sitka Small'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    VerticalAlignment = taAlignTop
+    object lblUserName: TLabel
+      Left = 65
+      Top = 57
+      Width = 71
+      Height = 16
+      Caption = 'User Name :'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblEmail: TLabel
+      Left = 65
+      Top = 148
+      Width = 42
+      Height = 16
+      Caption = 'Email :'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblPassword: TLabel
+      Left = 65
+      Top = 241
+      Width = 64
+      Height = 16
+      Caption = 'Password :'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object editUserName: TwwDBEdit
+      Left = 65
+      Top = 84
+      Width = 225
+      Height = 24
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object editEmail: TwwDBEdit
+      Left = 65
+      Top = 175
+      Width = 225
+      Height = 24
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object editPassword: TwwDBEdit
+      Left = 65
+      Top = 265
+      Width = 225
+      Height = 24
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object btnSubmit: TButton
+      Left = 64
+      Top = 328
+      Width = 225
+      Height = 33
+      Caption = 'Submit'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+    end
+  end
+end

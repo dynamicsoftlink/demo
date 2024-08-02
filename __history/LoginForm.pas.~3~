@@ -1,0 +1,59 @@
+unit LoginForm;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, vcl.Wwdbedit,
+  Vcl.ExtCtrls;
+
+type
+  TformLogin = class(TForm)
+    panelLogin: TPanel;
+    lblEmail: TLabel;
+    lblPassword: TLabel;
+    editEmail: TwwDBEdit;
+    editLoginPassword: TwwDBEdit;
+    btnSubmit: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formLogin: TformLogin;
+
+implementation
+
+{$R *.dfm}
+
+procedure TformLogin.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+    Action := caFree;
+    formLogin := nil;
+end;
+
+procedure TformLogin.FormCreate(Sender: TObject);
+begin
+    Self.OnShow := FormShow;
+  Self.OnResize := FormResize;
+end;
+
+procedure TformLogin.FormResize(Sender: TObject);
+begin
+    panelLogin.Left := (ClientWidth div 2) - (panelLogin.Width div 2);
+    panelLogin.Top := (ClientHeight div 2) - (panelLogin.Height div 2);
+end;
+
+procedure TformLogin.FormShow(Sender: TObject);
+begin
+    panelLogin.Left := (ClientWidth div 2) - (panelLogin.Width div 2);
+    panelLogin.Top := (ClientHeight div 2) - (panelLogin.Height div 2);
+end;
+
+end.

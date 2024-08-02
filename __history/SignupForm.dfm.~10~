@@ -1,0 +1,442 @@
+object formSignup: TformSignup
+  Left = 0
+  Top = 0
+  Caption = 'Signup'
+  ClientHeight = 511
+  ClientWidth = 1001
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnResize = FormResize
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object panelSignup: TPanel
+    AlignWithMargins = True
+    Left = 344
+    Top = 40
+    Width = 361
+    Height = 441
+    BorderStyle = bsSingle
+    Caption = 'Signup Form'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Sitka Small'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    VerticalAlignment = taAlignTop
+    object lblUserName: TLabel
+      Left = 65
+      Top = 57
+      Width = 71
+      Height = 16
+      Caption = 'User Name :'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblEmail: TLabel
+      Left = 65
+      Top = 148
+      Width = 42
+      Height = 16
+      Caption = 'Email :'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblPassword: TLabel
+      Left = 65
+      Top = 241
+      Width = 64
+      Height = 16
+      Caption = 'Password :'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lblMessage: TLabel
+      Left = 107
+      Top = 400
+      Width = 144
+      Height = 16
+      Cursor = crHandPoint
+      Caption = 'Already Have an Account?'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsUnderline]
+      ParentFont = False
+      OnClick = lblMessageClick
+    end
+    object editUserName: TwwDBEdit
+      Left = 65
+      Top = 79
+      Width = 225
+      Height = 24
+      Color = clWhite
+      DataField = 'UserName'
+      DataSource = srcUser
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object editEmail: TwwDBEdit
+      Left = 65
+      Top = 175
+      Width = 225
+      Height = 24
+      DataField = 'Email'
+      DataSource = srcUser
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object editPassword: TwwDBEdit
+      Left = 65
+      Top = 265
+      Width = 225
+      Height = 24
+      DataField = 'Password'
+      DataSource = srcUser
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object btnSubmitSignup: TButton
+      Left = 64
+      Top = 328
+      Width = 225
+      Height = 33
+      Caption = 'Submit'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Sitka Small'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+      OnClick = btnSubmitSignupClick
+    end
+  end
+  object navUser: TwwDBNavigator
+    Left = 32
+    Top = 152
+    Width = 350
+    Height = 25
+    DataSource = srcUser
+    RepeatInterval.InitialDelay = 500
+    RepeatInterval.Interval = 100
+    object navUserFirst: TwwNavButton
+      Left = 0
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Move to first record'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserFirst'
+      Enabled = False
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 0
+      Style = nbsFirst
+    end
+    object navUserPriorPage: TwwNavButton
+      Left = 25
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Move backward 10 records'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserPriorPage'
+      Enabled = False
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 1
+      Style = nbsPriorPage
+    end
+    object navUserPrior: TwwNavButton
+      Left = 50
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Move to prior record'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserPrior'
+      Enabled = False
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 2
+      Style = nbsPrior
+    end
+    object navUserNext: TwwNavButton
+      Left = 75
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Move to next record'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserNext'
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 3
+      Style = nbsNext
+    end
+    object navUserNextPage: TwwNavButton
+      Left = 100
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Move forward 10 records'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserNextPage'
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 4
+      Style = nbsNextPage
+    end
+    object navUserLast: TwwNavButton
+      Left = 125
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Move to last record'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserLast'
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 5
+      Style = nbsLast
+    end
+    object navUserInsert: TwwNavButton
+      Left = 150
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Insert new record'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserInsert'
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 6
+      Style = nbsInsert
+    end
+    object navUserDelete: TwwNavButton
+      Left = 175
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Delete current record'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserDelete'
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 7
+      Style = nbsDelete
+    end
+    object navUserEdit: TwwNavButton
+      Left = 200
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Edit current record'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserEdit'
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 8
+      Style = nbsEdit
+    end
+    object navUserPost: TwwNavButton
+      Left = 225
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Post changes of current record'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserPost'
+      Enabled = False
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 9
+      Style = nbsPost
+    end
+    object navUserCancel: TwwNavButton
+      Left = 250
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Cancel changes made to current record'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserCancel'
+      Enabled = False
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 10
+      Style = nbsCancel
+    end
+    object navUserRefresh: TwwNavButton
+      Left = 275
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Refresh the contents of the dataset'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserRefresh'
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 11
+      Style = nbsRefresh
+    end
+    object navUserSaveBookmark: TwwNavButton
+      Left = 300
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Bookmark current record'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserSaveBookmark'
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 12
+      Style = nbsSaveBookmark
+    end
+    object navUserRestoreBookmark: TwwNavButton
+      Left = 325
+      Top = 0
+      Width = 25
+      Height = 25
+      Hint = 'Go back to saved bookmark'
+      ImageIndex = -1
+      NumGlyphs = 2
+      Spacing = 4
+      Transparent = False
+      Caption = 'navUserRestoreBookmark'
+      Enabled = False
+      DisabledTextColors.ShadeColor = clGray
+      DisabledTextColors.HighlightColor = clBtnHighlight
+      Index = 13
+      Style = nbsRestoreBookmark
+    end
+  end
+  object gridUser: TwwDBGrid
+    Left = 18
+    Top = 217
+    Width = 320
+    Height = 120
+    Selected.Strings = (
+      'UserID'#9'10'#9'UserID'
+      'UserName'#9'50'#9'UserName'
+      'Email'#9'50'#9'Email'
+      'Password'#9'20'#9'Password')
+    IniAttributes.Delimiter = ';;'
+    IniAttributes.UnicodeIniFile = False
+    TitleColor = clBtnFace
+    FixedCols = 0
+    ShowHorzScrollBar = True
+    DataSource = srcUser
+    TabOrder = 2
+    TitleAlignment = taLeftJustify
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    TitleLines = 1
+    TitleButtons = False
+  end
+  object tblUser: TADOTable
+    Active = True
+    Connection = formDefault.conn
+    CursorType = ctStatic
+    TableName = 'tblUser'
+    Left = 48
+    Top = 40
+  end
+  object srcUser: TDataSource
+    DataSet = tblUser
+    Left = 128
+    Top = 48
+  end
+end

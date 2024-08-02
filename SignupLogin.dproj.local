@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.252,=D:\Delphi Projects\Login Form\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.238,D:\Delphi Projects\Login Form\Unit1.pas=D:\Delphi Projects\Login Form\LoginForm.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.755,=D:\Delphi Projects\Login Form\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.717,C:\Users\Aeon\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\Delphi Projects\Login Form\SignupLogin.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.900,D:\Delphi Projects\Login Form\Unit1.pas=D:\Delphi Projects\Login Form\DefaultForm.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.916,C:\Users\Aeon\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\Delphi Projects\Login Form\SignupForm.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.916,C:\Users\Aeon\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\Delphi Projects\Login Form\SignupForm.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.794,=C:\Users\Aeon\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.238,D:\Delphi Projects\Login Form\Unit1.dfm=D:\Delphi Projects\Login Form\LoginForm.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.900,D:\Delphi Projects\Login Form\Unit1.dfm=D:\Delphi Projects\Login Form\DefaultForm.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,31 @@
+unit LoginForm;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, vcl.Wwdbedit,
+  Vcl.ExtCtrls;
+
+type
+  TformLogin = class(TForm)
+    panelSignup: TPanel;
+    lblEmail: TLabel;
+    lblPassword: TLabel;
+    editEmail: TwwDBEdit;
+    editPassword: TwwDBEdit;
+    btnSubmit: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formLogin: TformLogin;
+
+implementation
+
+{$R *.dfm}
+
+end.

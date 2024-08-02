@@ -1,0 +1,14 @@
+program SignupLogin;
+
+uses
+  Vcl.Forms,
+  SignupForm in 'SignupForm.pas' {formSignup};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TformSignup, formSignup);
+  Application.Run;
+end.
