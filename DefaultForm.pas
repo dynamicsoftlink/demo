@@ -11,7 +11,7 @@ type
     mainMenu: TMainMenu;
     menuSignup: TMenuItem;
     conn: TADOConnection;
-    procedure menuSignupClick(Sender: TObject);
+    procedure menuSignupClick(Sender: TObject); 
   private
     { Private declarations }
   public
